@@ -1,0 +1,24 @@
+{
+  "name": "nickolasburr/floatcmp",
+  "description": "Compare float-pointing numbers with optional precision.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nickolas Burr",
+      "email": "nickolasburr@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1||^8.0"
+  },
+  "suggest": {
+    "ext-bcmath": "Provides bccomp function"
+  },
+  "autoload": {
+    "files": ["floatcmp.php"],
+    "psr-4": {
+      "FloatCmp\\": "src/"
+    }
+  }
+}
