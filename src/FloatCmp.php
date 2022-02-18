@@ -13,6 +13,7 @@ use function bccomp;
 use function floatval;
 use function function_exists;
 use function number_format;
+use function substr;
 
 class FloatCmp
 {
@@ -55,11 +56,13 @@ class FloatCmp
         float $value,
         int $scale
     ): string {
-        return number_format(
+        /** @var string $result */
+        $result = number_format(
             $value,
-            $scale,
+            ++$scale,
             self::DECIMAL_SEPARATOR,
             ''
         );
+        return substr($result, 0, -1);
     }
 }
