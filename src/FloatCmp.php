@@ -11,15 +11,13 @@ namespace FloatCmp;
 
 use function bccomp;
 use function floatval;
-use function floor;
 use function function_exists;
-use function log10;
-use function max;
-use function sprintf;
-use function substr;
+use function number_format;
 
 class FloatCmp
 {
+    public const DECIMAL_SEPARATOR = '.';
+
     /**
      * @param float $a
      * @param float $b
@@ -57,14 +55,11 @@ class FloatCmp
         float $value,
         int $scale
     ): string {
-        /** @var string $format */
-        $format = sprintf(
-            '%%.%dF',
-            max($scale - floor(log10($value)), 0) + 1
+        return number_format(
+            $value,
+            $scale,
+            self::DECIMAL_SEPARATOR,
+            ''
         );
-
-        /** @var string $result */
-        $result = sprintf($format, $value);
-        return substr($result, 0, -1);
     }
 }
