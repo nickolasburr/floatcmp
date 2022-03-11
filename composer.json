@@ -1,6 +1,6 @@
 {
   "name": "nickolasburr/floatcmp",
-  "description": "Compare float-pointing numbers with optional precision.",
+  "description": "Compare floating-point numbers with optional precision.",
   "type": "library",
   "license": "MIT",
   "authors": [
