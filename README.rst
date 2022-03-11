@@ -7,7 +7,7 @@ floatcmp
 Description
 -----------
 
-Compare float-pointing numbers with optional precision.
+Compare floating-point numbers with optional precision.
 
 Installation
 ------------
