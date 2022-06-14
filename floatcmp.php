@@ -24,7 +24,11 @@ if (!function_exists('floatcmp')) {
      * @param int|null $scale
      * @return int
      */
-    function floatcmp(float $a, float $b, ?int $scale = PHP_FLOAT_DIG): int {
+    function floatcmp(
+        float $a,
+        float $b,
+        ?int $scale = PHP_FLOAT_DIG
+    ): int {
         return FloatCmp::compare($a, $b, $scale);
     }
 }

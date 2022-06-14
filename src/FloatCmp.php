@@ -15,7 +15,7 @@ use function function_exists;
 use function number_format;
 use function substr;
 
-class FloatCmp
+final class FloatCmp
 {
     public const DECIMAL_SEPARATOR = '.';
 
