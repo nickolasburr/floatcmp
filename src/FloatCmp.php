@@ -12,8 +12,8 @@ namespace FloatCmp;
 use function bccomp;
 use function floatval;
 use function function_exists;
+use function mb_substr;
 use function number_format;
-use function substr;
 
 final class FloatCmp
 {
@@ -63,6 +63,6 @@ final class FloatCmp
             self::DECIMAL_SEPARATOR,
             ''
         );
-        return substr($result, 0, -1);
+        return mb_substr($result, 0, -1);
     }
 }
