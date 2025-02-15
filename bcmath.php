@@ -1,14 +1,14 @@
 <?php
 /**
- * floatcmp.php
+ * bcmath.php
  *
  * @package   FloatCmp
  * @copyright Copyright (C) 2025 Nickolas Burr <nickolasburr@gmail.com>
  */
 declare(strict_types=1);
 
-#require_once __DIR__ . '/src/FloatCmp.php';
-use FloatCmp\FloatCmp;
+#require_once __DIR__ . '/src/BcMath.php';
+use FloatCmp\BcMath;
 
 if (!function_exists('floatcmp')) {
     /**
@@ -22,6 +22,6 @@ if (!function_exists('floatcmp')) {
         float|string $b,
         ?int $scale = PHP_FLOAT_DIG
     ): int {
-        return FloatCmp::compare($a, $b, $scale);
+        return BcMath::compare($a, $b, $scale);
     }
 }

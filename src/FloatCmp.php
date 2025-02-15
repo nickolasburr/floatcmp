@@ -3,7 +3,7 @@
  * FloatCmp.php
  *
  * @package   FloatCmp
- * @copyright Copyright (C) 2024 Nickolas Burr <nickolasburr@gmail.com>
+ * @copyright Copyright (C) 2025 Nickolas Burr <nickolasburr@gmail.com>
  */
 declare(strict_types=1);
 
@@ -20,17 +20,20 @@ final class FloatCmp
     public const DECIMAL_SEPARATOR = '.';
 
     /**
-     * @param float $a
-     * @param float $b
+     * @param float|string $a
+     * @param float|string $b
      * @param int|null $scale
      * @return int
      * @static
      */
     public static function compare(
-        float $a,
-        float $b,
+        float|string $a,
+        float|string $b,
         ?int $scale = null
     ): int {
+        $a = (float) $a;
+        $b = (float) $b;
+
         if ($scale === null) {
             return $a <=> $b;
         }
